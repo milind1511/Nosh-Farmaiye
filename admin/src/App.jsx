@@ -21,7 +21,7 @@ const App = () => {
     <div className="admin-root">
       <ToastContainer />
       <div className="admin-shell">
-        {isAuthenticated ? <Navbar /> : null}
+        <Navbar />
         <div className="admin-body">
           {isAuthenticated ? <Sidebar /> : null}
           <main className="admin-content">

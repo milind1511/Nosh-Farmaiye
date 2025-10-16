@@ -11,6 +11,7 @@ const Navbar = () => {
   const { token, admin, setAdmin, setToken } = useContext(StoreContext);
 
   const brandTitle = useMemo(() => BRAND_NAME_EN || "Nosh Farmaiye", []);
+  const isAuthenticated = useMemo(() => Boolean(token && admin), [token, admin]);
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("admin");
@@ -25,10 +26,10 @@ const Navbar = () => {
         <BrandWordmark compact />
       </div>
       <div className="admin-navbar__center" aria-hidden>
-        Admin Console
+        {isAuthenticated ? "Admin Console" : null}
       </div>
       <div className="admin-navbar__actions">
-        {token && admin ? (
+        {isAuthenticated ? (
           <button
             type="button"
             className="admin-navbar__button"
@@ -36,15 +37,7 @@ const Navbar = () => {
           >
             Logout
           </button>
-        ) : (
-          <button
-            type="button"
-            className="admin-navbar__button admin-navbar__button--ghost"
-            onClick={() => navigate("/")}
-          >
-            Login
-          </button>
-        )}
+        ) : null}
       </div>
     </header>
   );
