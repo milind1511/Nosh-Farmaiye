@@ -1,0 +1,201 @@
+.add {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 4vw, 36px);
+    color: var(--color-text);
+}
+
+.add > h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary-strong);
+}
+
+.add form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3vw, 32px);
+}
+
+.add-img-upload {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.add-img-upload p {
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary-strong);
+    font-size: 0.75rem;
+}
+
+.add-img-upload label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(120px, 18vw, 160px);
+    aspect-ratio: 1;
+    border-radius: var(--radius-md);
+    border: 2px dashed rgba(129, 37, 67, 0.24);
+    background: rgba(255, 200, 87, 0.12);
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-img-upload label:hover {
+    border-color: rgba(246, 149, 26, 0.6);
+    transform: translateY(-2px);
+}
+
+.add-img-upload img {
+    width: 60%;
+    object-fit: contain;
+}
+
+.add-product-name,
+.add-product-description {
+    width: 100%;
+    max-width: 520px;
+}
+
+.add-product-name input,
+.add-product-description textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(129, 37, 67, 0.2);
+    background: rgba(255, 253, 248, 0.72);
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-product-description textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus {
+    border-color: rgba(246, 149, 26, 0.8);
+    box-shadow: 0 0 0 4px rgba(246, 149, 26, 0.18);
+    outline: none;
+}
+
+.add-category-price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(18px, 4vw, 32px);
+}
+
+.add-category,
+.add-price {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-category p,
+.add-price p {
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary-strong);
+    font-size: 0.75rem;
+}
+
+.add-category select,
+.add-price input {
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(129, 37, 67, 0.2);
+    background: rgba(255, 253, 248, 0.72);
+    min-width: 180px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-category select:focus,
+.add-price input:focus {
+    border-color: rgba(246, 149, 26, 0.8);
+    box-shadow: 0 0 0 4px rgba(246, 149, 26, 0.18);
+    outline: none;
+}
+
+.add-category-status {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--color-primary-strong);
+}
+
+.add-category-status button {
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(129, 37, 67, 0.4);
+    background: transparent;
+    color: var(--color-primary-strong);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-category-status button:hover {
+    background: rgba(129, 37, 67, 0.12);
+}
+
+.add-price__currency {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+.add-btn {
+    align-self: flex-start;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f06b47 0%, #b71f3f 100%);
+    color: #fff6ec;
+    cursor: pointer;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.add-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-subtle);
+}
+
+@media (max-width: 768px) {
+    .add-img-upload {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .add-category select,
+    .add-price input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .add {
+        gap: 20px;
+    }
+
+    .add-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

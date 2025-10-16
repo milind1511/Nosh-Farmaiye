@@ -1,0 +1,115 @@
+.food-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.food-display__header {
+    display: grid;
+    gap: 1rem;
+    background: linear-gradient(145deg, rgba(205, 81, 53, 0.08), rgba(255, 198, 164, 0.16));
+    border-radius: 1.5rem;
+    padding: 1.75rem 1.5rem;
+    border: 1px solid rgba(205, 81, 53, 0.18);
+    box-shadow: 0 22px 46px rgba(36, 12, 4, 0.08);
+}
+
+.food-display__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.food-display__badge {
+    align-self: flex-start;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(205, 81, 53, 0.12);
+    color: rgba(205, 81, 53, 0.95);
+}
+
+.food-display h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.65rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--brand-ink);
+    letter-spacing: 0.015em;
+}
+
+.food-display__description {
+    max-width: 55ch;
+    color: var(--brand-ink-muted);
+    line-height: 1.6;
+    font-size: 0.98rem;
+}
+
+.food-display__cta {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(34, 22, 11, 0.06);
+    color: rgba(205, 81, 53, 0.95);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 160ms ease, transform 160ms ease;
+}
+
+.food-display__cta:hover {
+    background: rgba(205, 81, 53, 0.16);
+    transform: translateY(-1px);
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.75rem;
+}
+
+.food-display__empty {
+    border-radius: 1.25rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px dashed rgba(205, 81, 53, 0.35);
+    color: var(--brand-ink-muted);
+    line-height: 1.6;
+}
+
+.food-display__empty p:first-of-type {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--brand-ink);
+}
+
+@media (max-width: 960px) {
+    .food-display__header {
+        border-radius: 1.25rem;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .food-display__header {
+        gap: 0.85rem;
+    }
+
+    .food-display__cta {
+        font-size: 0.8rem;
+    }
+
+    .food-display-list {
+        gap: 1.35rem;
+    }
+}

@@ -1,0 +1,76 @@
+.app-download {
+    width: min(1080px, 92vw);
+    margin: 120px auto;
+    padding: clamp(40px, 8vw, 64px);
+    background: linear-gradient(135deg, rgba(255, 200, 87, 0.18), rgba(129, 37, 67, 0.08));
+    border-radius: var(--radius-lg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(24px, 6vw, 48px);
+    align-items: center;
+    box-shadow: 0 18px 36px rgba(90, 18, 41, 0.12);
+}
+
+.app-download__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.app-download__content h2 {
+    font-family: "Playfair Display", "Times New Roman", serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--color-primary-strong);
+}
+
+.app-download__content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    max-width: 38ch;
+}
+
+.app-download__platforms {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: clamp(16px, 4vw, 24px);
+}
+
+.app-download__platforms a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 16px;
+}
+
+.app-download__platforms img {
+    width: clamp(160px, 30vw, 200px);
+    height: auto;
+}
+
+.app-download__platforms a:hover,
+.app-download__platforms a:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(129, 37, 67, 0.18);
+}
+
+@media (max-width: 720px) {
+    .app-download {
+        margin: 80px auto;
+        text-align: center;
+    }
+
+    .app-download__content {
+        align-items: center;
+    }
+
+    .app-download__content p {
+        max-width: none;
+    }
+
+    .app-download__platforms {
+        justify-content: center;
+    }
+}

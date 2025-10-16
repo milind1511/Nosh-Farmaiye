@@ -1,0 +1,88 @@
+.admin-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(18px, 4vw, 48px);
+    padding: clamp(18px, 4vw, 32px);
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.admin-navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2vw, 16px);
+}
+
+.admin-navbar__center {
+    flex: 1;
+    text-align: center;
+    font-family: "Playfair Display", "Times New Roman", serif;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(64, 31, 37, 0.76);
+}
+
+.admin-navbar__actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 28px);
+}
+
+.admin-navbar__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 26px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.76rem;
+    border: none;
+    background: linear-gradient(135deg, #f06b47 0%, #b71f3f 100%);
+    color: #fff6ec;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.admin-navbar__button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-subtle);
+}
+
+.admin-navbar__button--ghost {
+    background: rgba(129, 37, 67, 0.08);
+    border: 1px solid rgba(129, 37, 67, 0.25);
+    color: var(--color-primary-strong);
+}
+
+.admin-navbar__button--ghost:hover {
+    background: rgba(129, 37, 67, 0.16);
+}
+
+@media (max-width: 720px) {
+    .admin-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-navbar__center {
+        width: 100%;
+        text-align: left;
+        margin-top: 8px;
+    }
+
+    .admin-navbar__actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .admin-navbar__button,
+    .admin-navbar__button--ghost {
+        flex: 1;
+        text-align: center;
+    }
+}

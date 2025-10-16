@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Hind:wght@300;400;500;600&display=swap");
+
+:root {
+    --color-background: #fff7ed;
+    --color-surface: #fff1d9;
+    --color-surface-alt: #fce8c8;
+    --color-card: #fffdf8;
+    --color-primary: #812543;
+    --color-primary-strong: #5a1229;
+    --color-accent: #f6951a;
+    --color-highlight: #ffc857;
+    --color-text: #3c1f25;
+    --color-text-muted: #7b555a;
+    --color-border: rgba(129, 37, 67, 0.08);
+    --shadow-soft: 0 22px 45px rgba(61, 19, 28, 0.12);
+    --shadow-subtle: 0 12px 24px rgba(61, 19, 28, 0.08);
+    --radius-lg: 40px;
+    --radius-md: 24px;
+    --radius-sm: 12px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Hind", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--color-text);
+    background: linear-gradient(180deg, var(--color-background) 0%, #fffaf1 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", "Times New Roman", serif;
+    font-weight: 600;
+    color: var(--color-primary-strong);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.admin-root {
+    min-height: 100vh;
+}
+
+.admin-shell {
+    width: min(1240px, 98vw);
+    margin: clamp(20px, 5vw, 44px) auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 5vw, 40px);
+}
+
+.admin-body {
+    display: flex;
+    gap: clamp(20px, 4vw, 36px);
+    align-items: flex-start;
+}
+
+.admin-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 4vw, 32px);
+}
+
+.admin-panel {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: clamp(24px, 4vw, 40px);
+    animation: fadeIn 0.4s ease both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 960px) {
+    .admin-shell {
+        width: min(100%, 96vw);
+        margin: clamp(18px, 5vw, 32px) auto;
+    }
+
+    .admin-body {
+        flex-direction: column;
+    }
+}

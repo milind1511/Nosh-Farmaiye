@@ -1,0 +1,204 @@
+.explore-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.explore-menu__header {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.explore-menu__intro {
+	display: flex;
+	flex-direction: column;
+	gap: 0.65rem;
+}
+
+.explore-menu__badge {
+	align-self: flex-start;
+	padding: 0.35rem 0.75rem;
+	border-radius: 999px;
+	background: rgba(205, 81, 53, 0.12);
+	color: rgba(205, 81, 53, 0.95);
+	text-transform: uppercase;
+	letter-spacing: 0.09em;
+	font-size: 0.72rem;
+	font-weight: 600;
+}
+
+.explore-menu h1 {
+	font-family: var(--font-serif);
+	font-weight: 700;
+	color: var(--brand-ink);
+	letter-spacing: 0.02em;
+}
+
+.explore-menu-text {
+	max-width: 54ch;
+	color: var(--brand-ink-muted);
+	line-height: 1.6;
+}
+
+.explore-menu-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 1.5rem;
+	margin: 1.25rem 0 0.75rem;
+}
+
+.explore-menu__status {
+	grid-column: 1 / -1;
+	padding: 1rem 1.25rem;
+	border-radius: 1rem;
+	background: rgba(205, 81, 53, 0.08);
+	color: rgba(205, 81, 53, 0.95);
+	font-weight: 500;
+}
+
+.explore-menu__status--error {
+	background: rgba(205, 81, 53, 0.12);
+	color: #7b1e25;
+}
+
+.explore-menu__status--notice {
+	background: rgba(205, 81, 53, 0.08);
+	color: var(--brand-ink);
+}
+
+.category-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 0.75rem;
+	padding: 1.5rem 1.25rem;
+	border-radius: 1.25rem;
+	border: 1px solid transparent;
+	background: linear-gradient(var(--surface), var(--surface)) padding-box,
+		linear-gradient(135deg, rgba(250, 132, 45, 0.65), rgba(179, 64, 112, 0.65)) border-box;
+	box-shadow: 0 18px 36px rgba(34, 15, 5, 0.08);
+	color: var(--brand-ink);
+	text-align: left;
+	transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+	cursor: pointer;
+}
+
+.category-card:focus-visible {
+	outline: 3px solid rgba(205, 81, 53, 0.55);
+	outline-offset: 3px;
+}
+
+.category-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 22px 38px rgba(34, 15, 5, 0.12);
+}
+
+.category-card--active {
+	border-color: rgba(205, 81, 53, 0.45);
+	box-shadow: 0 26px 44px rgba(205, 81, 53, 0.22);
+}
+
+.category-card__badge {
+	align-self: flex-start;
+	padding: 0.45rem 0.8rem;
+	border-radius: 999px;
+	background: rgba(205, 81, 53, 0.12);
+	color: var(--brand-ink);
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.category-card__icon {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 1rem;
+	background: rgba(255, 255, 255, 0.8);
+	display: grid;
+	place-items: center;
+	font-size: 1.6rem;
+	color: rgba(205, 81, 53, 0.9);
+}
+
+.category-card__labels {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.category-card__label-primary {
+	font-family: var(--font-serif);
+	font-size: 1.35rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+}
+
+.category-card__label-secondary {
+	font-size: 0.95rem;
+	color: var(--brand-ink-muted);
+}
+
+.category-card__description {
+	font-size: 0.9rem;
+	color: var(--brand-ink-muted);
+	line-height: 1.5;
+}
+
+.category-card__cta {
+	margin-top: 0.25rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	color: rgba(205, 81, 53, 0.95);
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+.category-card__cta svg {
+	width: 1.1rem;
+	height: 1.1rem;
+	transform: translateX(0);
+	transition: transform 160ms ease;
+}
+
+.category-card:hover .category-card__cta svg {
+	transform: translateX(3px);
+}
+
+.explore-menu hr {
+	margin-top: 0.5rem;
+	border: none;
+	height: 1px;
+	background: linear-gradient(90deg, rgba(205, 81, 53, 0), rgba(205, 81, 53, 0.4), rgba(205, 81, 53, 0));
+}
+
+@media (max-width: 960px) {
+	.explore-menu {
+		gap: 1rem;
+	}
+
+	.explore-menu__header {
+		gap: 1rem;
+	}
+
+	.explore-menu-list {
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	}
+}
+
+@media (max-width: 640px) {
+	.explore-menu h1 {
+		font-size: 1.65rem;
+	}
+
+	.explore-menu__badge {
+		font-size: 0.68rem;
+	}
+
+	.category-card {
+		padding: 1.25rem;
+	}
+}

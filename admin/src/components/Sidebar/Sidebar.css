@@ -1,0 +1,94 @@
+.admin-sidebar {
+    width: clamp(220px, 24vw, 260px);
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: clamp(24px, 5vw, 32px);
+    position: sticky;
+    top: clamp(16px, 4vw, 32px);
+    align-self: flex-start;
+}
+
+.admin-sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 3vw, 18px);
+}
+
+.admin-sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.42);
+    border: 1px solid transparent;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.admin-sidebar__link:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-subtle);
+    border-color: rgba(129, 37, 67, 0.2);
+}
+
+.admin-sidebar__link--active {
+    background: linear-gradient(135deg, rgba(246, 149, 26, 0.16), rgba(129, 37, 67, 0.12));
+    border-color: rgba(246, 149, 26, 0.6);
+    box-shadow: 0 12px 28px rgba(129, 37, 67, 0.16);
+}
+
+.admin-sidebar__icon {
+    display: inline-flex;
+    width: 34px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(246, 149, 26, 0.16);
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-sidebar__icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.admin-sidebar__label {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary-strong);
+    font-size: 0.82rem;
+}
+
+@media (max-width: 960px) {
+    .admin-sidebar {
+        position: static;
+        width: 100%;
+    }
+
+    .admin-sidebar__nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .admin-sidebar__link {
+        flex: 1 1 calc(50% - 12px);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .admin-sidebar__link {
+        flex: 1 1 100%;
+    }
+
+    .admin-sidebar__label {
+        font-size: 0.74rem;
+    }
+}

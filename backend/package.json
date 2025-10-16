@@ -1,0 +1,36 @@
+{
+  "name": "nosh-farmaiye-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Nosh फ़रमाइए cloud kitchen",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "bootstrap:core": "npm run seed:admin && npm run seed:menu && npm run seed:coupons",
+    "bootstrap:all": "npm run bootstrap:core && npm run seed:analytics",
+    "predev": "npm run bootstrap:core",
+    "dev": "nodemon server.js",
+    "prestart": "npm run bootstrap:core",
+    "start": "node server.js",
+    "seed:menu": "node scripts/bootstrapMenu.mjs",
+    "seed:coupons": "node scripts/bootstrapCoupons.mjs",
+    "seed:admin": "node scripts/bootstrapAdmin.mjs",
+    "seed:analytics": "node scripts/seedAnalyticsDemo.mjs",
+    "clean:analytics": "node scripts/cleanAnalyticsDemo.mjs",
+    "test": "node --test"
+  },
+  "author": "Milind Sardana",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4",
+    "stripe": "^16.6.0",
+    "validator": "^13.12.0"
+  }
+}

@@ -1,0 +1,153 @@
+.my-orders{
+    margin: 50px 0px;
+}
+.my-orders .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.my-orders-order{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #454545;
+    border: 1px solid tomato;
+}
+.my-orders-order img{
+    width: 50px;
+}
+.my-orders-order p span{
+    color: tomato;
+}
+.my-orders-order p b{
+    font-weight: 500;
+    color: #454545;
+}
+.my-orders-order-placed{
+    grid-column: 2 / span 3;
+    font-size: 12px;
+    color: #666666;
+}
+.my-orders-order-payment{
+    font-weight: 600;
+    color: #6d3f2a;
+}
+.my-orders-order-savings{
+    grid-column: 1 / -1;
+    font-size: 12px;
+    color: #277d57;
+    font-weight: 600;
+}
+.my-orders-order-actions{
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+.my-orders-order-tracking{
+    grid-column: 1 / -1;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(255, 99, 71, 0.45);
+    display: grid;
+    gap: 12px;
+}
+.my-orders-order-tracking-heading{
+    font-weight: 600;
+    font-size: 13px;
+    color: #333333;
+}
+.my-orders-order-tracking-steps{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+.my-orders-order-tracking-step{
+    background: #fff5f2;
+    border: 1px solid #ffd9cf;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+    color: #b35a42;
+}
+.my-orders-order-tracking-step.is-complete{
+    background: #ffe6e0;
+    border-color: tomato;
+    color: #6d3f2a;
+    font-weight: 600;
+}
+.my-orders-order-tracking-meta{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    font-size: 12px;
+    color: #575757;
+}
+.my-orders-order-tracking-meta .label{
+    display: block;
+    font-weight: 600;
+    color: #3e3e3e;
+}
+.my-orders-order-tracking-meta .value{
+    display: block;
+    margin-top: 2px;
+    line-height: 1.4;
+}
+.my-orders-order-tracking-meta .instructions{
+    grid-column: 1 / -1;
+}
+.my-orders-order button{
+    border: none;
+    padding: 12px 0px;
+    border-radius: 4px;
+    background-color: #ffe1e1;
+    cursor: pointer;
+    color: #454545;
+    flex: 1 1 160px;
+}
+.my-orders-order button.primary{
+    background-color: tomato;
+    color: #ffffff;
+    font-weight: 600;
+}
+.my-orders-order button.primary:hover{
+    background-color: #e04a2f;
+}
+@media (max-width:900px) {
+    .my-orders-order{
+        grid-template-columns: 1fr 2fr 1fr;
+        row-gap: 5px;
+        font-size: 12px;
+    }
+    .my-orders-order-placed{
+        grid-column: 1 / -1;
+        font-size: 11px;
+    }
+    .my-orders-order-tracking{
+        gap: 10px;
+    }
+    .my-orders-order-tracking-steps{
+        grid-template-columns: 1fr;
+    }
+    .my-orders-order-tracking-step{
+        font-size: 12px;
+    }
+    .my-orders-order-actions{
+        flex-direction: column;
+    }
+    .my-orders-order-savings{
+        font-size: 11px;
+    }
+    .my-orders-order button{
+        font-size: 10px;
+    }
+}

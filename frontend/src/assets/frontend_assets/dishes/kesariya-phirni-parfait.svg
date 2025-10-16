@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="68%">
+      <stop offset="0%" stop-color="#fff5e1" />
+      <stop offset="55%" stop-color="#ffdca7" />
+      <stop offset="100%" stop-color="#e88a3d" />
+    </radialGradient>
+    <linearGradient id="plate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f3ede6" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffeec6" />
+      <stop offset="60%" stop-color="#ffc463" />
+      <stop offset="100%" stop-color="#f07b2a" />
+    </linearGradient>
+    <radialGradient id="cream" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#fff7e5" />
+      <stop offset="100%" stop-color="#ffe0a8" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)" />
+  <ellipse cx="256" cy="262" rx="208" ry="166" fill="url(#plate)" />
+  <ellipse cx="256" cy="272" rx="184" ry="136" fill="#fff9f3" />
+
+  <g transform="translate(182 150)">
+    <path d="M74 0c20 0 42 8 48 20l28 170c4 24-22 44-76 44s-80-20-76-44l28-170C32 8 54 0 74 0z" fill="url(#glass)" />
+    <ellipse cx="74" cy="28" rx="66" ry="24" fill="#fff1cf" />
+    <ellipse cx="74" cy="200" rx="66" ry="28" fill="#f0681c" opacity="0.4" />
+    <ellipse cx="74" cy="60" rx="60" ry="20" fill="#ffe9bb" />
+    <ellipse cx="74" cy="90" rx="58" ry="20" fill="#ffc462" opacity="0.7" />
+    <ellipse cx="74" cy="120" rx="56" ry="18" fill="#f79c3a" opacity="0.6" />
+    <ellipse cx="74" cy="150" rx="54" ry="16" fill="#f0792b" opacity="0.5" />
+    <ellipse cx="74" cy="180" rx="52" ry="14" fill="#e65b1f" opacity="0.5" />
+    <ellipse cx="74" cy="208" rx="60" ry="22" fill="#f4b56c" opacity="0.55" />
+    <ellipse cx="74" cy="18" rx="58" ry="18" fill="#fff8e3" />
+    <ellipse cx="74" cy="10" rx="52" ry="14" fill="#fff3d1" />
+    <path d="M22 184c18 12 44 18 52 18s34-6 52-18" fill="none" stroke="#ffe5ba" stroke-width="10" stroke-linecap="round" opacity="0.6" />
+  </g>
+
+  <circle cx="196" cy="212" r="14" fill="#ffefc2" />
+  <circle cx="330" cy="212" r="12" fill="#ffe6b0" />
+  <ellipse cx="256" cy="402" rx="150" ry="32" fill="#f0a25e" opacity="0.3" />
+</svg>

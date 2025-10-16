@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="52%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffe0d2" />
+      <stop offset="60%" stop-color="#ffb18a" />
+      <stop offset="100%" stop-color="#e8633d" />
+    </radialGradient>
+    <linearGradient id="plate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5ef" />
+      <stop offset="100%" stop-color="#f4ded6" />
+    </linearGradient>
+    <radialGradient id="tikka" cx="45%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffd0b6" />
+      <stop offset="46%" stop-color="#ff7a4b" />
+      <stop offset="100%" stop-color="#c43220" />
+    </radialGradient>
+    <radialGradient id="glaze" cx="55%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#ffe7d6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ff824c" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)" />
+  <ellipse cx="256" cy="260" rx="208" ry="164" fill="url(#plate)" opacity="0.95" />
+  <ellipse cx="256" cy="270" rx="184" ry="134" fill="#fff9f5" />
+  <ellipse cx="256" cy="276" rx="152" ry="108" fill="url(#tikka)" />
+
+  <g opacity="0.55" fill="#8c1d12">
+    <ellipse cx="190" cy="220" rx="30" ry="20" />
+    <ellipse cx="240" cy="240" rx="42" ry="26" />
+    <ellipse cx="310" cy="228" rx="38" ry="24" />
+    <ellipse cx="330" cy="276" rx="32" ry="20" />
+    <ellipse cx="220" cy="284" rx="34" ry="22" />
+  </g>
+
+  <g opacity="0.6" fill="#ffb691">
+    <ellipse cx="184" cy="212" rx="24" ry="16" />
+    <ellipse cx="236" cy="234" rx="30" ry="20" />
+    <ellipse cx="304" cy="222" rx="26" ry="18" />
+    <ellipse cx="320" cy="270" rx="24" ry="16" />
+    <ellipse cx="212" cy="278" rx="26" ry="18" />
+  </g>
+
+  <path d="M170 202c20-16 62-32 104-34 42-2 94 12 116 30 20 17 16 40-10 56-28 18-76 28-118 24-46-4-82-20-100-36-20-18-16-36 8-40z" fill="none" stroke="#fff0e8" stroke-width="12" opacity="0.45" />
+
+  <ellipse cx="256" cy="274" rx="120" ry="86" fill="url(#glaze)" />
+  <ellipse cx="256" cy="400" rx="150" ry="32" fill="#ffb18a" opacity="0.25" />
+</svg>

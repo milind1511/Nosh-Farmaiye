@@ -1,0 +1,173 @@
+.festive-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.festive-offers__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 56ch;
+}
+
+.festive-offers__badge {
+  align-self: flex-start;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(246, 149, 26, 0.12);
+  color: var(--color-primary-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.festive-offers__header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 2vw + 1.3rem, 2.25rem);
+  color: var(--color-primary-strong);
+}
+
+.festive-offers__header p {
+  color: var(--brand-ink-muted, rgba(64, 31, 37, 0.7));
+  line-height: 1.6;
+}
+
+.festive-offers__status {
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+  background: rgba(205, 81, 53, 0.08);
+  color: rgba(205, 81, 53, 0.95);
+  font-weight: 500;
+}
+
+.festive-offers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.festive-offers__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.4rem 1.35rem;
+  border-radius: 1.4rem;
+  border: 1px solid rgba(129, 37, 67, 0.06);
+  background: linear-gradient(var(--color-card), var(--color-card)) padding-box,
+    linear-gradient(140deg, rgba(246, 149, 26, 0.26), rgba(129, 37, 67, 0.22)) border-box;
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.festive-offers__card::after {
+  content: "";
+  position: absolute;
+  inset: -60% 45% 40% -30%;
+  background: radial-gradient(circle at center, rgba(255, 200, 87, 0.18), transparent 65%);
+  pointer-events: none;
+}
+
+.festive-offers__code {
+  align-self: flex-start;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(129, 37, 67, 0.12);
+  color: var(--color-primary-strong);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.festive-offers__card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary-strong);
+}
+
+.festive-offers__card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.festive-offers__meta {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--brand-ink-muted, rgba(64, 31, 37, 0.7));
+}
+
+.festive-offers__meta div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.festive-offers__meta dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(64, 31, 37, 0.55);
+}
+
+.festive-offers__meta dd {
+  font-weight: 600;
+  color: var(--color-primary-strong);
+}
+
+.festive-offers__cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.festive-offers__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f06b47 0%, #b71f3f 100%);
+  color: #fff6ec;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.festive-offers__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.festive-offers__hint {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .festive-offers__grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .festive-offers__card {
+    padding: 1.2rem 1.1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .festive-offers__cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .festive-offers__cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,197 @@
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: clamp(24px, 4vw, 48px);
+    padding: clamp(32px, 5vw, 56px);
+    border-radius: var(--radius-lg);
+    background: radial-gradient(
+            circle at top right,
+            rgba(255, 185, 71, 0.22),
+            transparent 58%
+        ),
+        linear-gradient(135deg, #5a1229 0%, #a22841 48%, #f6a259 100%);
+    color: #fff8f1;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: calc(var(--radius-lg) - 12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(18px, 3vw, 28px);
+    padding-left: clamp(12px, 3vw, 48px);
+}
+
+.hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 240, 224, 0.72);
+}
+
+.hero__eyebrow::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 237, 224, 0.45);
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1.15;
+    color: #fff8f1;
+}
+
+.hero h1 span {
+    color: #ffc857;
+}
+
+.hero p {
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    color: rgba(255, 244, 240, 0.86);
+}
+
+.hero__cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 244, 240, 0.4);
+    color: #fff8f1;
+    transition: transform 0.2s ease, background 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.hero__cta:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 249, 240, 0.16);
+}
+
+.hero__cta--primary {
+    background: linear-gradient(135deg, #ffc857 0%, #f78c4a 100%);
+    color: #5a1229;
+    border: none;
+}
+
+.hero__meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    backdrop-filter: blur(8px);
+}
+
+.hero__meta-title {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 244, 240, 0.64);
+    margin-bottom: 6px;
+}
+
+.hero__meta-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fffdf6;
+}
+
+.hero__visual {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__card {
+    background: rgba(255, 250, 239, 0.14);
+    border-radius: 32px;
+    padding: clamp(20px, 4vw, 32px);
+    border: 1px solid rgba(255, 244, 240, 0.18);
+    max-width: 320px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 32px 60px rgba(20, 7, 7, 0.28);
+    color: #fff5eb;
+}
+
+.hero__card-badge {
+    display: inline-flex;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(255, 200, 87, 0.2);
+    color: #ffc857;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.hero__card h3 {
+    margin-top: 18px;
+    font-size: 1.5rem;
+    color: #fff9f0;
+}
+
+.hero__card p {
+    margin: 12px 0 18px;
+    color: rgba(255, 244, 240, 0.85);
+}
+
+.hero__card ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 248, 241, 0.9);
+}
+
+.hero__card li::before {
+    content: "•";
+    color: #ffc857;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 28px 24px 32px;
+    }
+
+    .hero__content {
+        padding-left: clamp(12px, 6vw, 24px);
+    }
+
+    .hero h1 {
+        font-size: clamp(2.1rem, 8vw, 2.6rem);
+    }
+
+    .hero__card {
+        width: 100%;
+        max-width: none;
+    }
+}

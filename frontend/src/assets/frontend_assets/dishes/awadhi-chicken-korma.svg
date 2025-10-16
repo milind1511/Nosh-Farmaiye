@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#fff6d8" />
+      <stop offset="60%" stop-color="#f8dea0" />
+      <stop offset="100%" stop-color="#d3a34a" />
+    </radialGradient>
+    <linearGradient id="plate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f4f0e4" />
+    </linearGradient>
+    <radialGradient id="korma" cx="48%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffe8af" />
+      <stop offset="50%" stop-color="#f4c062" />
+      <stop offset="100%" stop-color="#bf7b2d" />
+    </radialGradient>
+    <linearGradient id="drizzle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff0d0" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fffbe8" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)" />
+  <ellipse cx="256" cy="260" rx="214" ry="168" fill="url(#plate)" opacity="0.9" />
+  <ellipse cx="256" cy="268" rx="186" ry="138" fill="#fffdf6" />
+  <ellipse cx="256" cy="270" rx="150" ry="112" fill="url(#korma)" opacity="0.9" />
+  <ellipse cx="256" cy="278" rx="128" ry="90" fill="#d68832" opacity="0.45" />
+
+  <g fill="#fff6d7" opacity="0.7">
+    <ellipse cx="208" cy="232" rx="42" ry="30" />
+    <ellipse cx="300" cy="252" rx="52" ry="36" />
+    <ellipse cx="240" cy="292" rx="58" ry="40" />
+    <ellipse cx="332" cy="304" rx="46" ry="30" />
+  </g>
+
+  <g fill="#a2581d" opacity="0.35">
+    <ellipse cx="180" cy="320" rx="32" ry="18" />
+    <ellipse cx="344" cy="330" rx="34" ry="19" />
+    <ellipse cx="260" cy="310" rx="28" ry="16" />
+    <ellipse cx="284" cy="214" rx="24" ry="14" />
+  </g>
+
+  <path d="M150 206c22-18 78-38 120-40 48-2 116 16 134 40 18 22 2 48-28 66-30 19-78 31-122 28-44-3-90-24-112-47-20-20-18-38 8-47z" fill="none" stroke="#fff3cf" stroke-width="12" stroke-linecap="round" opacity="0.5" />
+
+  <g>
+    <path d="M180 188c2-14 18-26 38-28 22-1 48 11 48 28 0 18-28 30-46 30-20 0-42-14-40-30z" fill="#fff5d3" opacity="0.7" />
+    <path d="M320 192c0-12 16-24 34-24 18 0 38 10 38 24s-22 25-38 26c-18 1-34-12-34-26z" fill="#fff9e7" opacity="0.6" />
+  </g>
+
+  <path d="M170 352c16 12 50 20 86 20 36 0 70-8 86-20" fill="none" stroke="url(#drizzle)" stroke-width="18" stroke-linecap="round" opacity="0.7" />
+</svg>
