@@ -28,7 +28,7 @@ services:
       MONGO_URL: mongodb://mongo:27017/nosh-farmaiye
       JWT_SECRET: "716e6f70c53e454e8f454a39893b4b9a06c7862c485129ff54cfb8d09f58b891495696296d5f0c2c42d5cc952c73471b141f12a77fbdaab77f0404238a8fe73f"
       SALT: "10"
-      STRIPE_SECRET_KEY: "sk_test_51SCkmd2KJpqpHKvcLLrswFtSMFyuvOv5C4GmqlnaBWWyzv5kiHI5WiNeaVlRl0W1mMJa7u5DxNqCTpRLhFqut9H800ngT0bVQ3"
+      STRIPE_SECRET_KEY: "sk_test_#"
       ALLOWED_ORIGINS: "http://localhost,http://127.0.0.1,http://localhost:5173,http://localhost:5174"
       FRONTEND_URL: "http://localhost:5173"
       ADMIN_URL: "http://localhost:5174"
