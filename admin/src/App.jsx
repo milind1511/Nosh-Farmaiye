@@ -1,6 +1,7 @@
+import { useContext, useMemo } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Add from "./pages/Add/Add";
 import List from "./pages/List/List";
 import Orders from "./pages/Orders/Orders";
@@ -10,23 +11,85 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./components/Login/Login";
 import { API_BASE_URL } from "./config";
+import { StoreContext } from "./context/StoreContext";
 
 const App = () => {
+  const { admin, token } = useContext(StoreContext);
+  const isAuthenticated = useMemo(() => Boolean(admin && token), [admin, token]);
+
   return (
     <div className="admin-root">
       <ToastContainer />
       <div className="admin-shell">
         <Navbar />
         <div className="admin-body">
-          <Sidebar />
+          {isAuthenticated ? <Sidebar /> : null}
           <main className="admin-content">
             <Routes>
-              <Route path="/" element={<Login url={API_BASE_URL} />} />
-              <Route path="/add" element={<Add url={API_BASE_URL} />} />
-              <Route path="/list" element={<List url={API_BASE_URL} />} />
-              <Route path="/orders" element={<Orders url={API_BASE_URL} />} />
-              <Route path="/coupons" element={<Coupons url={API_BASE_URL} />} />
-              <Route path="/analytics" element={<Analytics url={API_BASE_URL} />} />
+              <Route
+                path="/"
+                element={
+                  isAuthenticated ? (
+                    <Navigate to="/add" replace />
+                  ) : (
+                    <Login url={API_BASE_URL} />
+                  )
+                }
+              />
+              <Route
+                path="/add"
+                element={
+                  isAuthenticated ? (
+                    <Add url={API_BASE_URL} />
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                }
+              />
+              <Route
+                path="/list"
+                element={
+                  isAuthenticated ? (
+                    <List url={API_BASE_URL} />
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                }
+              />
+              <Route
+                path="/orders"
+                element={
+                  isAuthenticated ? (
+                    <Orders url={API_BASE_URL} />
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                }
+              />
+              <Route
+                path="/coupons"
+                element={
+                  isAuthenticated ? (
+                    <Coupons url={API_BASE_URL} />
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                }
+              />
+              <Route
+                path="/analytics"
+                element={
+                  isAuthenticated ? (
+                    <Analytics url={API_BASE_URL} />
+                  ) : (
+                    <Navigate to="/" replace />
+                  )
+                }
+              />
+              <Route
+                path="*"
+                element={<Navigate to={isAuthenticated ? "/add" : "/"} replace />}
+              />
             </Routes>
           </main>
         </div>
